@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <lcbrq translate="label" module="lcb_multivoucher">
+            <label>LCBRQ</label>
+            <sort_order>1200</sort_order>
+        </lcbrq>
+    </tabs>
+    <sections>
+        <multivoucher translate="label" module="lcb_multivoucher">                    
+            <label>Multivoucher</label>
+            <tab>lcbrq</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>999</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>0</show_in_website>
+            <show_in_store>0</show_in_store>            
+            <groups>
+                <api translate="label"> 
+                    <label>API</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>0</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <fields>
+                        <test>
+                            <label>Test mode</label>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>1</sort_order>
+                        </test>
+                        <username translate="label">
+                            <label>Username</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                        </username>
+                        <password translate="label">
+                            <label>Password</label>
+                            <frontend_type>obscure</frontend_type>
+                            <backend_model>adminhtml/system_config_backend_encrypted</backend_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                        </password>
+                        <log_all_responses>
+                            <label>Log All</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <comment>Security Risk</comment>
+                        </log_all_responses>
+                    </fields>
+                </api>
+                <order translate="label">
+                    <label>Order</label>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <sort_order>1</sort_order>
+                    <frontend_type>text</frontend_type>
+                    <fields>
+                        <email_template>
+                            <label>Email Template</label>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_email_template</source_model>
+                            <sort_order>1</sort_order>
+                        </email_template>
+                    </fields>
+                </order>
+                <limit translate="label">
+                    <label>Limit</label>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <sort_order>1</sort_order>
+                    <frontend_type>text</frontend_type>
+                    <fields>
+                        <user_daily>
+                            <label>User daily limit</label>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <frontend_type>text</frontend_type>
+                            <validate>validate-digits</validate>
+                            <sort_order>10</sort_order>
+                        </user_daily>
+                        <general_daily>
+                            <label>General daily limit</label>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <validate>validate-digits</validate>
+                        </general_daily>
+                    </fields>
+                </limit>
+            </groups>
+        </multivoucher>
+    </sections>
+</config>
