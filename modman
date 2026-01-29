@@ -1,3 +1,4 @@
 app/code/local/LCB/Multivoucher
 app/etc/modules/LCB_Multivoucher.xml
 app/locale/pl_PL/LCB_Multivoucher.csv
+shell/multivoucher.php

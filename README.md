@@ -15,6 +15,12 @@ php multivoucher.php --import vouchers
 php multivoucher.php --import brands
 ```
 
+Then activate rewards manually in admin or within SQL query
+
+```
+UPDATE `lcb_multivoucher_reward` SET `active` = 1;
+```
+
 #### Important
 
 This module comes out without any native logic of points balance.
