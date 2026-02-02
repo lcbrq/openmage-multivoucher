@@ -143,7 +143,7 @@ class LCB_Multivoucher_Model_Api
     private function request($path, $data = array())
     {
         $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, $this->endpoint . DS . $path);
+        curl_setopt($ch, CURLOPT_URL, $this->endpoint . '/' . $path);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
         $headers =  $data ? ['Content-Type:application/json'] : [];
