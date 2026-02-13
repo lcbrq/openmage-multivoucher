@@ -1,7 +1,7 @@
 <config>
     <modules>
         <LCB_Multivoucher>
-            <version>1.3.2</version>
+            <version>1.3.3</version>
         </LCB_Multivoucher>
     </modules>
     <global>

@@ -34,12 +34,14 @@ class LCB_Multivoucher_Model_Api
         if (Mage::getStoreConfig('multivoucher/api/test')) {
             $this->endpoint = 'https://testapi.multivoucher.pl';
         }
+
         $this->username = Mage::getStoreConfig('multivoucher/api/username');
         $this->password = Mage::getModel('core/encryption')->decrypt((string) Mage::getStoreConfig('multivoucher/api/password'));
     }
 
     /**
      * @return void
+     * @throws Exception
      */
     public function authorize()
     {
@@ -47,7 +49,12 @@ class LCB_Multivoucher_Model_Api
             "username" => $this->username,
             "password" => $this->password,
         ));
+
         $result = json_decode($response);
+
+        if (isset($result->code) && $result->code == '401') {
+            throw new Exception($result->message);
+        }
 
         $this->token = $result->token;
     }
