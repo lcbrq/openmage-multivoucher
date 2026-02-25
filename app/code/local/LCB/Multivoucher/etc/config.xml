@@ -1,7 +1,7 @@
 <config>
     <modules>
         <LCB_Multivoucher>
-            <version>1.3.3</version>
+            <version>1.3.4</version>
         </LCB_Multivoucher>
     </modules>
     <global>
@@ -106,6 +106,11 @@
                 </LCB_Multivoucher>
             </modules>
         </translate>
+        <csp>
+            <img-src>
+                <multivoucher>multivoucher.pl</multivoucher>
+            </img-src>
+        </csp>
     </frontend>
     <default>
         <multivoucher>
