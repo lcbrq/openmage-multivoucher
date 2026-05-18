@@ -6,10 +6,10 @@
  */
 class LCB_Multivoucher_Adminhtml_AdminMultivoucherPurchaseController extends Mage_Adminhtml_Controller_Action
 {
-    protected function _isAllowed()
-    {
-        return Mage::getSingleton('admin/session')->isAllowed('multivoucher/purchases');
-    }
+    /**
+     * @inheritDoc
+     */
+    public const ADMIN_RESOURCE = 'multivoucher/purchases';
 
     protected function _initAction()
     {
